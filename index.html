@@ -23,7 +23,7 @@
         /* ================= RESET & TYPOGRAPHY ================= */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; font-family: 'Segoe UI', Roboto, sans-serif; }
-        body { background-color: var(--gray-light); color: var(--dark-text); line-height: 1.6; overflow-x: hidden; padding-bottom: 150px; }
+        body { background-color: var(--gray-light); color: var(--dark-text); line-height: 1.6; overflow-x: hidden; }
         a { text-decoration: none; color: inherit; }
         ul { list-style: none; }
         
@@ -138,7 +138,7 @@
         .float-btn:hover { background: var(--red); transform: translateX(-5px); }
 
         /* ================= FOOTER ================= */
-        footer { background: #0b111e; color: #a0aec0; padding: 60px 8% 20px; font-size: 0.9rem; }
+        footer { background: #0b111e; color: #a0aec0; padding: 60px 8% 120px; font-size: 0.9rem; }
         .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
         .footer-logo { font-size: 1.5rem; color: var(--white); font-weight: bold; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
         .footer-col h4 { color: var(--white); font-size: 1.1rem; margin-bottom: 20px; text-transform: uppercase; border-bottom: 2px solid var(--red); display: inline-block; padding-bottom: 5px; }
@@ -147,8 +147,6 @@
         .footer-bottom { text-align: center; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); }
     /* ================= RESPONSIVE DI ĐỘNG ================= */
         @media (max-width: 768px) {
-            body { padding-bottom: 220px; } /* Đẩy nội dung lên để không bị thanh audio che khuất */
-            
             /* Sắp xếp lại Header */
             header { flex-direction: column; gap: 10px; padding: 10px; }
             .header-logo { font-size: 1rem; text-align: center; justify-content: center; }
@@ -161,7 +159,7 @@
             .hero-title { font-size: 1.8rem; }
             .hero-desc { font-size: 1rem; }
             
-            /* Chia cột thành 1 cột dọc (Mục lục nằm trên, bài viết nằm dưới) */
+            /* Chia cột thành 1 cột dọc (Mục lục trên, bài dưới) */
             .article-wrapper { flex-direction: column; gap: 20px; padding: 30px 5%; }
             .sidebar { width: 100%; position: relative; top: 0; padding: 15px; margin-bottom: 10px;}
             .article-content { width: 100%; padding: 20px; }
@@ -171,7 +169,7 @@
             .article-content h2 { font-size: 1.1rem; padding: 12px; margin: 25px 0 15px; }
             p, .poem, blockquote { font-size: 1rem; }
             
-            /* Căn chỉnh lại thanh Audio Player cho khỏi tràn màn hình */
+            /* Căn chỉnh lại thanh Audio Player */
             .audio-player { 
                 flex-direction: column; gap: 15px; padding: 25px 20px 15px; 
                 border-radius: 20px; bottom: 10px; width: 90%;
@@ -179,8 +177,12 @@
             .audio-info, .audio-controls, .audio-settings { width: 100%; justify-content: center; }
             .audio-progress-container { top: 8px; left: 15px; right: 15px; }
             
-            /* Nâng nút tiện ích trôi nổi cao lên tránh cấn Audio Player */
+            /* Nâng nút tiện ích trôi nổi cao lên */
             .floating-sidebar { bottom: 180px; transform: scale(0.85); right: 5px;}
+
+            /* Xếp dọc cột Footer cho điện thoại */
+            .footer-grid { grid-template-columns: 1fr; gap: 20px; text-align: center; }
+            .footer-logo { justify-content: center; }
         }
     </style>
 </head>
