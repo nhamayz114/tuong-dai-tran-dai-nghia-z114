@@ -145,6 +145,43 @@
         .footer-col ul li { margin-bottom: 10px; }
         .footer-col ul a:hover { color: var(--red); padding-left: 5px; }
         .footer-bottom { text-align: center; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); }
+    /* ================= RESPONSIVE DI ĐỘNG ================= */
+        @media (max-width: 768px) {
+            body { padding-bottom: 220px; } /* Đẩy nội dung lên để không bị thanh audio che khuất */
+            
+            /* Sắp xếp lại Header */
+            header { flex-direction: column; gap: 10px; padding: 10px; }
+            .header-logo { font-size: 1rem; text-align: center; justify-content: center; }
+            .header-logo img { height: 35px; }
+            .main-menu { gap: 15px; flex-wrap: wrap; justify-content: center; }
+            .main-menu a { font-size: 0.85rem; }
+            
+            /* Chỉnh lại Banner / Hero */
+            .hero { margin-top: 100px; height: auto; padding: 50px 5%; }
+            .hero-title { font-size: 1.8rem; }
+            .hero-desc { font-size: 1rem; }
+            
+            /* Chia cột thành 1 cột dọc (Mục lục nằm trên, bài viết nằm dưới) */
+            .article-wrapper { flex-direction: column; gap: 20px; padding: 30px 5%; }
+            .sidebar { width: 100%; position: relative; top: 0; padding: 15px; margin-bottom: 10px;}
+            .article-content { width: 100%; padding: 20px; }
+            
+            /* Thu nhỏ kích thước chữ nội dung */
+            .article-content h1 { font-size: 1.3rem; }
+            .article-content h2 { font-size: 1.1rem; padding: 12px; margin: 25px 0 15px; }
+            p, .poem, blockquote { font-size: 1rem; }
+            
+            /* Căn chỉnh lại thanh Audio Player cho khỏi tràn màn hình */
+            .audio-player { 
+                flex-direction: column; gap: 15px; padding: 25px 20px 15px; 
+                border-radius: 20px; bottom: 10px; width: 90%;
+            }
+            .audio-info, .audio-controls, .audio-settings { width: 100%; justify-content: center; }
+            .audio-progress-container { top: 8px; left: 15px; right: 15px; }
+            
+            /* Nâng nút tiện ích trôi nổi cao lên tránh cấn Audio Player */
+            .floating-sidebar { bottom: 180px; transform: scale(0.85); right: 5px;}
+        }
     </style>
 </head>
 <body>
